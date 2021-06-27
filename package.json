@@ -1,0 +1,50 @@
+{
+  "name": "@mo36924/esbuild-loader",
+  "version": "1.0.0",
+  "description": "esbuild-loader",
+  "keywords": [],
+  "homepage": "https://github.com/mo36924/esbuild-loader#readme",
+  "bugs": {
+    "url": "https://github.com/mo36924/esbuild-loader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mo36924/esbuild-loader.git"
+  },
+  "license": "MIT",
+  "author": "mo36924",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "esbuild-node": "./dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "run-s clean format build:*",
+    "build:tsc": "tsc",
+    "clean": "del dist",
+    "format": "run-s format:*",
+    "format:sort-package-json": "sort-package-json",
+    "format:prettier": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "esbuild": "^0.12.10"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.2",
+    "sort-package-json": "^1.50.0",
+    "typescript": "^4.3.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
