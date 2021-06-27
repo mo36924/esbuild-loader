@@ -33,6 +33,7 @@ export const getSource: GetSource = async (url, context, defaultGetSource) => {
     const result = await build({
       outfile: `${path}.js`,
       entryPoints: [path],
+      target: "esnext",
       bundle: true,
       write: false,
       platform: "node",
